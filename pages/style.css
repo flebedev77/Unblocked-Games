@@ -1,0 +1,33 @@
+.game-content {
+    display: grid;
+    place-items: center;
+    width: 70%;
+    margin: 40px;
+    margin-top: 60px;
+}
+.game-content iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.game-controls {
+    background: rgb(57, 48, 111);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.game-controls > * {
+    margin: 10px;
+    color: white;
+}
+.game-controls > p {
+    margin-left: auto;
+    color: darkblue;
+    text-decoration: underline;
+}
+.game-controls > h3 {
+    font-weight: normal;
+    color: white;
+    margin-inline: 10px;
+    font-size: 0.8rem;
+}

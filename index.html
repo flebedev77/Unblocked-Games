@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <h2>Unblocked games</h2>
+        <input type="text" placeholder="Search for a game here" id="search" autocomplete="off" spellcheck="false"/>
+    </nav>
+
+    <main>
+        <div class="sidebar">
+            <!-- TODO category sidebar -->
+        </div>
+        <div class="content">
+            <div class="title">Games</div>
+            <div class="game-container">
+                <a href="pages/eggy-car">
+                    <img class="game-cover" src="imgs/eggy-car-cover.png"/>
+                    <p class="game-title">Eggy Car</p>
+                </a>
+                <a href="pages/basket-random">
+                    <img class="game-cover" src="imgs/basket-random-cover.jpg"/>
+                    <p class="game-title">Basket Random</p>
+                </a>
+                <a href="pages/gswitch-2">
+                    <img class="game-cover" src="imgs/gswitch2-cover.jpg"/>
+                    <p class="game-title">G-Switch 2</p>
+                </a>
+                <a href="pages/gswitch-3">
+                    <img class="game-cover" src="imgs/gswitch3-cover.jpg"/>
+                    <p class="game-title">G-Switch 3</p>
+                </a>
+                <a href="pages/rooftop-snipers">
+                    <img class="game-cover" src="imgs/cover-rooftop.jpg"/>
+                    <p class="game-title">Rooftop Snipers</p>
+                </a>
+                <a href="pages/helix-Jump">
+                    <img class="game-cover" src="imgs/helix-jump-cover.jpg"/>
+                    <p class="game-title">Helix Jump</p>
+                </a>
+                <a href="pages/eaglercraft">
+                    <img class="game-cover" src="imgs/cover-minecraft.png"/>
+                    <p class="game-title">Minecraft</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const search = document.querySelector("input")
+        const games = document.querySelector(".game-container").children
+
+        search.oninput = function() {
+            for(let i = 0; i < games.length; i++) {
+                let game = games[i];
+
+                const gameTitle = game.querySelector("p")
+
+                if (gameTitle.innerText.toLowerCase().includes(search.value.toLowerCase()) == false) {
+                    game.style.display = "none"
+                } else {
+                    game.style.display = "grid"
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
